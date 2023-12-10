@@ -1,0 +1,104 @@
+﻿@page "/doctors";
+@using BlazorForms.Data
+@inject Data.ApplicationDbContext db;
+@inject NavigationManager nav
+@attribute [Authorize]
+<h3>Pateint</h3>
+<EditForm Model="@doctor" OnValidSubmit="@ValidData" FormName="forml" class="row g-3">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="col-nd-6">
+
+        <label for="inputName" class="forn-label">Doctor Name</label>
+        <InputText @bind-Value="doctor.DoctorName" class="form-control" id="inputName" />
+    </div>
+    <div class="col-nd-6">
+
+        <label for="inputName" class="forn-label">Doctor Education</label>
+        <InputText @bind-Value="doctor.Education" class="form-control" id="inputName" />
+    </div>
+
+    <div class="col-nd-6">
+
+        <label for="inputName" class="forn-label">Doctor Speciality</label>
+        <InputText @bind-Value="doctor.DoctorSpicality" class="form-control" id="inputName" />
+    </div>
+   
+    <button type="submit" class="btn btn-primary">Add Doctor</button>
+</EditForm>
+<div class="col-nd-4"></div>
+<h2>List Of Doctors</h2>
+<table class="table table-bordered mt-5">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Doctor Name</th>
+            <th scope="col">Doctor Education</th>
+            <th scope="col">Speciality</th>
+
+            <th scope="col">Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Doctor pat in newDoctor)
+        {
+            <tr>
+                <th scope="row">@pat.Id</th>
+                <td>@pat.DoctorName</td>
+                <td>@pat.Education</td>
+                <td>@pat.DoctorSpicality</td>
+        
+                <td>
+
+                    <div class="">
+                        <span class="text-white" id="edit" @onclick="() => editItem(pat.Id)"> <ion-icon name="create-outline" class="fa-2x  bg-success fs-2"></ion-icon></span>
+
+                        <span id="delete" @onclick="() => DeleteItem(pat)" class="text-white"> <ion-icon name="trash-outline" class="fs-2 bg-danger"></ion-icon></span>
+
+
+
+
+
+                    </div>
+                </td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+@code {
+    [SupplyParameterFromQuery]
+    public Doctor doctor { get; set; }
+    List<Doctor> newDoctor;
+    List<Speciality> specialities;
+    protected override void OnInitialized()
+    {
+        doctor = new();
+        newDoctor = db.doctors.ToList();
+       
+    }
+    void ValidData()
+    {
+        newDoctor.Add(doctor);
+        db.doctors.Add(doctor);
+        db.SaveChanges();
+
+    }
+    private void DeleteItem(Doctor pat)
+    {
+        newDoctor.Remove(pat);
+        db.doctors.Remove(pat);
+
+        db.SaveChanges();
+
+    }
+    void editItem(int id)
+
+    {
+        nav.NavigateTo($"/editpatient/{id}");
+
+    }
+}

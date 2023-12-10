@@ -1,0 +1,38 @@
+﻿@page "/editspeciality/{id:int}"
+@using BlazorForms.Data
+
+@inject Data.ApplicationDbContext db;
+@inject NavigationManager nav
+
+<h2>Update Speciality </h2>
+<div class="col-nd-6">
+
+    <label for="inputName" class="forn-label">Speciality</label>
+    <input @bind="@special.SpecialityName" class="form-control" id="inputName" />
+</div>
+
+
+<button @onclick="updatedata" class="btn btn-primary">Update Specialty</button>
+
+
+@code {
+
+    [Parameter]
+    public int Id { get; set; }
+
+    public Speciality special;
+
+    protected override void OnInitialized()
+    {
+        Console.WriteLine(special);
+        special = db.specialities.Find(Id);
+    }
+    void updatedata()
+    {
+        db.specialities.Update(special);
+        db.SaveChanges();
+        nav.NavigateTo("/speciality");
+
+    }
+
+}

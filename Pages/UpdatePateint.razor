@@ -1,0 +1,52 @@
+﻿@page "/editpatient/{id:int}"
+@using BlazorForms.Data
+
+@inject Data.ApplicationDbContext db;
+@inject NavigationManager nav
+
+<h2>Update Patient </h2>
+    <div class="col-nd-6">
+
+        <label for="inputName" class="forn-label">PatientName</label>
+    <input @bind="@patien.PatientName" class="form-control" id="inputName" />
+    </div>
+    <div class="col-nd-6">
+
+        <label for="inputName" class="forn-label">Patient Discription</label>
+        <input @bind="@patien.PatientDiscription" class="form-control" id="inputName" />
+    </div>
+    <div class="col-nd-6">
+
+        <label for="inputName" class="forn-label">Speciality</label>
+        <input @bind="@patien.Id" class="form-control" id="inputName" />
+    </div>
+    <div class="col-nd-6">
+
+        <label for="inputName" class="forn-label">Doctor</label>
+        <input @bind="@patien.DoctorId" class="form-control" id="inputName" />
+    </div>
+
+    <button @onclick="updatedata" class="btn btn-primary">Update Patient</button>
+
+
+@code {   
+  
+    [Parameter]
+    public int Id { get; set; }
+
+    public Patient patien;
+
+    protected override void OnInitialized()
+    {
+        Console.WriteLine(patien);
+        patien = db.patients.Find(Id);
+    }
+    void updatedata()
+    {
+          db.patients.Update(patien);
+        db.SaveChanges();
+        nav.NavigateTo("/pateints");
+
+    }
+  
+}

@@ -1,0 +1,122 @@
+﻿@page "/Appoitment";
+@using BlazorForms.Data
+@inject Data.ApplicationDbContext db;
+@inject NavigationManager nav
+@attribute [Authorize]
+<h3>Pateint</h3>
+<EditForm Model="@appoitment" OnValidSubmit="@ValidData" FormName="forml" class="row g-3">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+
+    <div class="col-nd-6">
+
+        <label for="inputName" class="forn-label">appoitment date</label>
+        <InputDate @bind-Value="appoitment.AppoitmentDate" class="form-control" id="inputName" />
+    </div>
+
+    @*     <div class="col-nd-6">
+
+    <label for="inputName" class="forn-label">Doctor</label>
+    <InputText @bind-Value="patien.Doctor" class="form-control" id="inputName" />
+    </div> *@
+    <div class="form-group">
+        <label for="selectedValueId">Select a Patient:</label>
+        <select id="selectedValueId" name="SelectedValueId" asp-for="SelectedValueId" class="form-control" @bind="appoitment.PatientId">
+            <option value="">-- Select --</option>
+            @foreach (var option in newpatients)
+            {
+                <option value="@option.Id">@option.PatientName</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="selectedValueId">Select a Doctor:</label>
+        <select id="selectedValueId" name="SelectedValueId" asp-for="SelectedValueId" class="form-control" @bind="appoitment.DoctorId">
+            <option value="">-- Select --</option>
+            @foreach (var option in newdoctor)
+            {
+                <option value="@option.Id">@option.DoctorName</option>
+            }
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Appoitment</button>
+</EditForm>
+<div class="col-nd-4"></div>
+<table class="table table-bordered mt-5">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Patient Name</th>
+            <th scope="col">Doctor Name</th>
+           
+            
+            <th scope="col">Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Appoitment pat in newappoitments)
+        {
+            <tr>
+                <th scope="row">@pat.Id</th>
+                <td>@pat.PatientId</td>
+                <td>@pat.DoctorId</td>
+                <td>@pat.AppoitmentDate</td>
+              
+                <td>
+
+                    <div class="">
+                        <span class="text-white" id="edit" @onclick="() => editItem(pat.Id)"> <ion-icon name="create-outline" class="fa-2x  bg-success fs-2"></ion-icon></span>
+
+                        <span id="delete" @onclick="() => DeleteItem(pat)" class="text-white"> <ion-icon name="trash-outline" class="fs-2 bg-danger"></ion-icon></span>
+
+
+
+
+
+                    </div>
+                </td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+@code {
+    [SupplyParameterFromQuery]
+    public Appoitment appoitment { get; set; }
+    List<Patient> newpatients;
+    List<Appoitment> newappoitments;
+    List<Doctor> newdoctor;
+
+    protected override void OnInitialized()
+    {
+        appoitment = new();
+        newappoitments = db.appoitments.ToList();
+    
+        newpatients = db.patients.ToList();
+        newdoctor = db.doctors.ToList();
+    }
+    void ValidData()
+    {
+        newappoitments.Add(appoitment);
+        db.appoitments.Add(appoitment);
+        db.SaveChanges();
+
+    }
+    private void DeleteItem(Appoitment pat)
+    {
+        newappoitments.Remove(pat);
+        db.appoitments.Remove(pat);
+
+        db.SaveChanges();
+
+    }
+    void editItem(int id)
+
+    {
+      //  nav.NavigateTo($"/editpatient/{id}");
+
+    }
+}

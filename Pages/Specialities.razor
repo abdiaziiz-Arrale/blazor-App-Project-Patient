@@ -1,0 +1,87 @@
+﻿@page "/Speciality";
+@namespace BlazorForms.Data
+@using BlazorForms.Data
+@inject Data.ApplicationDbContext db;
+@inject NavigationManager nav
+@attribute [Authorize]
+<h3>Pateint</h3>
+<EditForm Model="@speciality" OnValidSubmit="@ValidData" FormName="forml" class="row g-3">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="col-nd-6">
+
+        <label for="inputName" class="forn-label">Speciality Name</label>
+        <InputText @bind-Value="speciality.SpecialityName" class="form-control" id="inputName" />
+    </div>
+ 
+    <button type="submit" class="btn btn-primary">Add Speciality</button>
+</EditForm>
+<div class="col-nd-4"></div>
+<table class="table table-bordered mt-5">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">SpecialityName</th>
+      
+            <th scope="col">Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Speciality pat in newSpeciality)
+        {
+            <tr>
+                <th scope="row">@pat.Id</th>
+                <td>@pat.SpecialityName</td>
+          
+                <td>
+
+                    <div class="">
+                        <span class="text-white" id="edit" @onclick="() => editItem(pat.Id)"> <ion-icon name="create-outline" class="fa-2x  bg-success fs-2"></ion-icon></span>
+
+                        <span id="delete" @onclick="() => DeleteItem(pat)" class="text-white"> <ion-icon name="trash-outline" class="fs-2 bg-danger"></ion-icon></span>
+
+
+
+
+
+                    </div>
+                </td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+@code {
+    [SupplyParameterFromQuery]
+    public Speciality speciality { get; set; }
+    List<Speciality> newSpeciality;
+    protected override void OnInitialized()
+    {
+        speciality = new();
+        newSpeciality = db.specialities.ToList();
+    }
+    void ValidData()
+    {
+        newSpeciality.Add(speciality);
+        db.specialities.Add(speciality);
+        db.SaveChanges();
+
+    }
+    private void DeleteItem(Speciality pat)
+    {
+        newSpeciality.Remove(pat);
+        db.specialities.Remove(pat);
+
+        db.SaveChanges();
+
+    }
+    void editItem(int id)
+
+    {
+        nav.NavigateTo($"/editspeciality/{id}");
+
+    }
+}

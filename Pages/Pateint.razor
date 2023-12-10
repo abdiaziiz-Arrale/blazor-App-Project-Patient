@@ -1,0 +1,123 @@
+﻿@page "/pateints";
+@using BlazorForms.Data
+@inject Data.ApplicationDbContext db;
+@inject NavigationManager nav
+@attribute [Authorize]
+<h3>Pateint</h3>
+<EditForm Model="@patien" OnValidSubmit="@ValidData" FormName="forml" class="row g-3">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="col-nd-6">
+
+        <label for="inputName" class="forn-label">PatientName</label>
+        <InputText @bind-Value="patien.PatientName" class="form-control" id="inputName" />
+    </div>
+    <div class="col-nd-6">
+
+        <label for="inputName" class="forn-label">Patient Discription</label>
+        <InputText @bind-Value="patien.PatientDiscription" class="form-control" id="inputName" />
+    </div>
+   
+@*     <div class="col-nd-6">
+
+        <label for="inputName" class="forn-label">Doctor</label>
+        <InputText @bind-Value="patien.Doctor" class="form-control" id="inputName" />
+    </div> *@
+    <div class="form-group">
+        <label for="selectedValueId">Select a Speciality:</label>
+        <select id="selectedValueId" name="SelectedValueId" asp-for="SelectedValueId" class="form-control" @bind="patien.SpecialityId" >
+            <option value="">-- Select --</option>
+            @foreach (var option in specialities)
+            {
+                <option value="@option.Id" >@option.SpecialityName</option>
+            }
+        </select>
+    </div> 
+    <div class="form-group">
+        <label for="selectedValueId">Select a Doctor:</label>
+        <select id="selectedValueId" name="SelectedValueId" asp-for="SelectedValueId" class="form-control" @bind="patien.DoctorId" >
+            <option value="">-- Select --</option>
+            @foreach (var option in doctors)
+            {
+                <option value="@option.Id" >@option.DoctorName</option>
+            }
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Patient</button>
+</EditForm>
+    <div class="col-nd-4"></div>
+<table class="table table-bordered mt-5">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Patient Name</th>
+            <th scope="col">Patient Discription</th>
+            <th scope="col">Speciality</th>
+            <th scope="col">Doctor</th>
+            <th scope="col">Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Patient pat in newpatients)
+        {
+                <tr>
+                <th scope="row">@pat.Id</th>
+                <td>@pat.PatientName</td>
+                <td>@pat.PatientDiscription</td>
+                <td>@pat.SpecialityId</td>
+                <td>@pat.DoctorId</td>
+                <td>
+
+                    <div class="">
+                        <span class="text-white" id="edit" @onclick="() => editItem(pat.Id)"> <ion-icon name="create-outline" class="fa-2x  bg-success fs-2"></ion-icon></span>
+
+                        <span id="delete" @onclick="() => DeleteItem(pat)" class="text-white"> <ion-icon name="trash-outline" class="fs-2 bg-danger"></ion-icon></span>
+                       
+                
+                      
+                  
+                       
+                   </div></td>
+        </tr>
+        }
+
+
+    </tbody>
+</table>
+@code {
+    [SupplyParameterFromQuery]
+    public Patient patien { get; set; }
+    List<Patient> newpatients;
+    List<Speciality> specialities;
+    List<Doctor> doctors;
+    protected override void OnInitialized()
+    {
+        patien = new();
+        specialities = db.specialities.ToList();
+        doctors = db.doctors.ToList();
+        newpatients = db.patients.ToList();
+    }
+    void ValidData()
+    {
+        newpatients.Add(patien);
+        db.patients.Add(patien);
+        db.SaveChanges();
+
+    }
+    private void DeleteItem(Patient pat)
+    {
+        newpatients.Remove(pat);
+        db.patients.Remove(pat);
+
+        db.SaveChanges();
+
+    }
+    void editItem(int id)
+
+    {
+        nav.NavigateTo($"/editpatient/{id}");
+
+    }
+}
