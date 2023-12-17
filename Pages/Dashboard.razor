@@ -1,0 +1,62 @@
+﻿@using BlazorForms.Data
+@inject Data.ApplicationDbContext db;
+
+<div class="row">
+    <div class="col-lg-3 col-md-6">
+        <div class="card bg-primary text-white">
+            <div class="card-body">
+                <h5 class="card-title">Patient</h5>
+                <p class="card-text">@newpatients.Count</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+        <div class="card bg-success text-white">
+            <div class="card-body">
+                <h5 class="card-title">Speciality</h5>
+                <p class="card-text">@specialities.Count</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+        <div class="card bg-warning text-white">
+            <div class="card-body">
+                <h5 class="card-title">Doctors</h5>
+                <p class="card-text">@doctors.Count</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+        <div class="card bg-danger text-white">
+            <div class="card-body">
+                <h5 class="card-title">Appoitments</h5>
+                <p class="card-text">@appoitments.Count</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@code {
+
+    List<Patient> newpatients;
+    List<Speciality> specialities;
+    List<Doctor> doctors;
+    List<Appoitment> appoitments;
+
+
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        specialities = db.specialities.ToList();
+        doctors = db.doctors.ToList();
+        newpatients = db.patients.ToList();
+        appoitments = db.appoitments.ToList();
+     
+    }
+
+}

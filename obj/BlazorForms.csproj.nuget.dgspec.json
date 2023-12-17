@@ -40,6 +40,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Custom.Radzen.Blazor": {
+              "target": "Package",
+              "version": "[4.3.6, )"
+            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.11, )"
@@ -64,11 +68,27 @@
               "target": "Package",
               "version": "[6.11.1, )"
             },
+            "Radzen.Blazor": {
+              "target": "Package",
+              "version": "[4.23.3, )"
+            },
+            "Radzen.Blazor.GridColumnVisibilityChooser": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Redzen": {
+              "target": "Package",
+              "version": "[15.0.0, )"
+            },
             "Syncfusion.Blazor.Buttons": {
               "target": "Package",
               "version": "[23.2.7, )"
             },
             "Syncfusion.Blazor.Grid": {
+              "target": "Package",
+              "version": "[23.2.7, )"
+            },
+            "Syncfusion.Chart.Windows": {
               "target": "Package",
               "version": "[23.2.7, )"
             }

@@ -3,6 +3,7 @@
 @inject Data.ApplicationDbContext db;
 @inject NavigationManager nav
 @attribute [Authorize]
+@inject IJSRuntime js
 <h3>Pateint</h3>
 <EditForm Model="@doctor" OnValidSubmit="@ValidData" FormName="forml" class="row g-3">
     <DataAnnotationsValidator />
@@ -19,12 +20,17 @@
         <InputText @bind-Value="doctor.Education" class="form-control" id="inputName" />
     </div>
 
-    <div class="col-nd-6">
-
-        <label for="inputName" class="forn-label">Doctor Speciality</label>
-        <InputText @bind-Value="doctor.DoctorSpicality" class="form-control" id="inputName" />
+    <div class="form-group">
+        <label for="selectedValueId">Select a Speciality:</label>
+        <select id="selectedValueId" name="SelectedValueId" asp-for="SelectedValueId" class="form-control" @bind="doctor.DoctorSpicality">
+            <option value="">-- Select --</option>
+            @foreach (var option in newspecialities)
+            {
+                <option value="@option.Id">@option.SpecialityName</option>
+            }
+        </select>
     </div>
-   
+
     <button type="submit" class="btn btn-primary">Add Doctor</button>
 </EditForm>
 <div class="col-nd-4"></div>
@@ -73,12 +79,13 @@
     [SupplyParameterFromQuery]
     public Doctor doctor { get; set; }
     List<Doctor> newDoctor;
-    List<Speciality> specialities;
+    List<Speciality> newspecialities;
     protected override void OnInitialized()
     {
         doctor = new();
         newDoctor = db.doctors.ToList();
-       
+        newspecialities = db.specialities.ToList();
+
     }
     void ValidData()
     {
@@ -87,12 +94,17 @@
         db.SaveChanges();
 
     }
-    private void DeleteItem(Doctor pat)
+    private async void DeleteItem(Doctor pat)
     {
-        newDoctor.Remove(pat);
-        db.doctors.Remove(pat);
+        bool accept = await js.InvokeAsync<bool>("confirm", "Are You sure to delete this");
+        // js.InvokeVoidAsync("alert", "hello From Javascript");
+        if (accept == true)
+        {
+            newDoctor.Remove(pat);
+            db.doctors.Remove(pat);
 
-        db.SaveChanges();
+            db.SaveChanges();
+        }
 
     }
     void editItem(int id)

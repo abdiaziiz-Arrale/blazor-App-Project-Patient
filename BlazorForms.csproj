@@ -8,14 +8,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Pages\Test.razor.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Pages\Test.razor.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Custom.Radzen.Blazor" Version="4.3.6" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.11" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.11" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.11" />
     <PackageReference Include="MudBlazor" Version="6.11.1" />
+    <PackageReference Include="Radzen.Blazor" Version="4.23.3" />
+    <PackageReference Include="Radzen.Blazor.GridColumnVisibilityChooser" Version="2.2.0" />
+    <PackageReference Include="Redzen" Version="15.0.0" />
     <PackageReference Include="Syncfusion.Blazor.Buttons" Version="23.2.7" />
     <PackageReference Include="Syncfusion.Blazor.Grid" Version="23.2.7" />
+    <PackageReference Include="Syncfusion.Chart.Windows" Version="23.2.7" />
   </ItemGroup>
 
   <ItemGroup>

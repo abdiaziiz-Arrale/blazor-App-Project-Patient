@@ -3,6 +3,8 @@
 @inject Data.ApplicationDbContext db;
 @inject NavigationManager nav
 @attribute [Authorize]
+
+
 <h3>Pateint</h3>
 <EditForm Model="@appoitment" OnValidSubmit="@ValidData" FormName="forml" class="row g-3">
     <DataAnnotationsValidator />
@@ -40,6 +42,7 @@
             }
         </select>
     </div>
+   
     <button type="submit" class="btn btn-primary">Add Appoitment</button>
 </EditForm>
 <div class="col-nd-4"></div>
@@ -94,12 +97,13 @@
     {
         appoitment = new();
         newappoitments = db.appoitments.ToList();
-    
+
         newpatients = db.patients.ToList();
         newdoctor = db.doctors.ToList();
     }
     void ValidData()
     {
+     
         newappoitments.Add(appoitment);
         db.appoitments.Add(appoitment);
         db.SaveChanges();

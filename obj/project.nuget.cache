@@ -1,15 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "1Guqm38m9idggsA3lcGFL/b989/eF07atJqVsqZyAoXp+Z+XlC++atFfDaaYMYHCQmblSi/ExddhXeJB/pw+Eg==",
+  "dgSpecHash": "5sj0HNtSeIHB5wun5y1/mELs6fU3bJcV8nm46DCRQf3hrOYLbCIoPV/yn7HkM8DMTfZO55H/J/C+OJ5phn2K3g==",
   "success": true,
   "projectFilePath": "C:\\Users\\abdia\\source\\repos\\BlazorForms\\BlazorForms\\BlazorForms.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\abdia\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\abdia\\.nuget\\packages\\blazored.localstorage\\4.1.5\\blazored.localstorage.4.1.5.nupkg.sha512",
+    "C:\\Users\\abdia\\.nuget\\packages\\custom.radzen.blazor\\4.3.6\\custom.radzen.blazor.4.3.6.nupkg.sha512",
+    "C:\\Users\\abdia\\.nuget\\packages\\dartsassbuilder\\1.0.0\\dartsassbuilder.1.0.0.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
-    "C:\\Users\\abdia\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.5\\microsoft.aspnetcore.authorization.7.0.5.nupkg.sha512",
-    "C:\\Users\\abdia\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.5\\microsoft.aspnetcore.components.7.0.5.nupkg.sha512",
-    "C:\\Users\\abdia\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\7.0.5\\microsoft.aspnetcore.components.analyzers.7.0.5.nupkg.sha512",
+    "C:\\Users\\abdia\\.nuget\\packages\\libsassbuilder\\2.0.1\\libsassbuilder.2.0.1.nupkg.sha512",
+    "C:\\Users\\abdia\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.14\\microsoft.aspnetcore.authorization.7.0.14.nupkg.sha512",
+    "C:\\Users\\abdia\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.14\\microsoft.aspnetcore.components.7.0.14.nupkg.sha512",
+    "C:\\Users\\abdia\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\7.0.14\\microsoft.aspnetcore.components.analyzers.7.0.14.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\7.0.5\\microsoft.aspnetcore.components.forms.7.0.5.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\microsoft.aspnetcore.components.web\\7.0.5\\microsoft.aspnetcore.components.web.7.0.5.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.11\\microsoft.aspnetcore.cryptography.internal.7.0.11.nupkg.sha512",
@@ -17,9 +21,9 @@
     "C:\\Users\\abdia\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\7.0.11\\microsoft.aspnetcore.diagnostics.entityframeworkcore.7.0.11.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\7.0.11\\microsoft.aspnetcore.identity.entityframeworkcore.7.0.11.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\7.0.11\\microsoft.aspnetcore.identity.ui.7.0.11.nupkg.sha512",
-    "C:\\Users\\abdia\\.nuget\\packages\\microsoft.aspnetcore.metadata\\7.0.5\\microsoft.aspnetcore.metadata.7.0.5.nupkg.sha512",
+    "C:\\Users\\abdia\\.nuget\\packages\\microsoft.aspnetcore.metadata\\7.0.14\\microsoft.aspnetcore.metadata.7.0.14.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
-    "C:\\Users\\abdia\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\abdia\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.1.0\\microsoft.data.sqlclient.sni.runtime.5.1.0.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.11\\microsoft.entityframeworkcore.7.0.11.nupkg.sha512",
@@ -42,7 +46,7 @@
     "C:\\Users\\abdia\\.nuget\\packages\\microsoft.extensions.localization\\7.0.5\\microsoft.extensions.localization.7.0.5.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\microsoft.extensions.localization.abstractions\\7.0.5\\microsoft.extensions.localization.abstractions.7.0.5.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
-    "C:\\Users\\abdia\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\abdia\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\microsoft.extensions.options\\7.0.1\\microsoft.extensions.options.7.0.1.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\microsoft.identity.client\\4.47.2\\microsoft.identity.client.4.47.2.nupkg.sha512",
@@ -60,6 +64,9 @@
     "C:\\Users\\abdia\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\mudblazor\\6.11.1\\mudblazor.6.11.1.nupkg.sha512",
+    "C:\\Users\\abdia\\.nuget\\packages\\radzen.blazor\\4.23.3\\radzen.blazor.4.23.3.nupkg.sha512",
+    "C:\\Users\\abdia\\.nuget\\packages\\radzen.blazor.gridcolumnvisibilitychooser\\2.2.0\\radzen.blazor.gridcolumnvisibilitychooser.2.2.0.nupkg.sha512",
+    "C:\\Users\\abdia\\.nuget\\packages\\redzen\\15.0.0\\redzen.15.0.0.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\syncfusion.blazor.buttons\\23.2.7\\syncfusion.blazor.buttons.23.2.7.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\syncfusion.blazor.calendars\\23.2.7\\syncfusion.blazor.calendars.23.2.7.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\syncfusion.blazor.core\\23.2.7\\syncfusion.blazor.core.23.2.7.nupkg.sha512",
@@ -73,9 +80,13 @@
     "C:\\Users\\abdia\\.nuget\\packages\\syncfusion.blazor.popups\\23.2.7\\syncfusion.blazor.popups.23.2.7.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\syncfusion.blazor.spinner\\23.2.7\\syncfusion.blazor.spinner.23.2.7.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\syncfusion.blazor.splitbuttons\\23.2.7\\syncfusion.blazor.splitbuttons.23.2.7.nupkg.sha512",
+    "C:\\Users\\abdia\\.nuget\\packages\\syncfusion.chart.base\\23.2.7\\syncfusion.chart.base.23.2.7.nupkg.sha512",
+    "C:\\Users\\abdia\\.nuget\\packages\\syncfusion.chart.windows\\23.2.7\\syncfusion.chart.windows.23.2.7.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\syncfusion.excelexport.net.core\\23.2.7\\syncfusion.excelexport.net.core.23.2.7.nupkg.sha512",
+    "C:\\Users\\abdia\\.nuget\\packages\\syncfusion.grouping.base\\23.2.7\\syncfusion.grouping.base.23.2.7.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\syncfusion.licensing\\23.2.7\\syncfusion.licensing.23.2.7.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\syncfusion.pdfexport.net.core\\23.2.7\\syncfusion.pdfexport.net.core.23.2.7.nupkg.sha512",
+    "C:\\Users\\abdia\\.nuget\\packages\\syncfusion.shared.base\\23.2.7\\syncfusion.shared.base.23.2.7.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.1\\system.configuration.configurationmanager.6.0.1.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
@@ -83,6 +94,7 @@
     "C:\\Users\\abdia\\.nuget\\packages\\system.formats.asn1\\5.0.0\\system.formats.asn1.5.0.0.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.24.0\\system.identitymodel.tokens.jwt.6.24.0.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
+    "C:\\Users\\abdia\\.nuget\\packages\\system.linq.dynamic.core\\1.3.7\\system.linq.dynamic.core.1.3.7.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
@@ -101,5 +113,46 @@
     "C:\\Users\\abdia\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\abdia\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Syncfusion.Chart.Base 23.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Syncfusion.Chart.Base",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Syncfusion.Chart.Windows 23.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Syncfusion.Chart.Windows",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Syncfusion.Grouping.Base 23.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Syncfusion.Grouping.Base",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Syncfusion.Shared.Base 23.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Syncfusion.Shared.Base",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

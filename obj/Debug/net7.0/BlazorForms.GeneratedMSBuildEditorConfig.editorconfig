@@ -30,6 +30,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/abdia/source/repos/BlazorForms/BlazorForms/Pages/Dashboard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/abdia/source/repos/BlazorForms/BlazorForms/Pages/Doctors.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRG9jdG9ycy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -44,6 +48,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/abdia/source/repos/BlazorForms/BlazorForms/Pages/Pateint.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF0ZWludC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdia/source/repos/BlazorForms/BlazorForms/Pages/PatientTest.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF0aWVudFRlc3QucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/abdia/source/repos/BlazorForms/BlazorForms/Pages/Specialities.razor]

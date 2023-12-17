@@ -109,3 +109,14 @@ C:\Users\abdia\source\repos\BlazorForms\BlazorForms\bin\Debug\net7.0\Syncfusion.
 C:\Users\abdia\source\repos\BlazorForms\BlazorForms\bin\Debug\net7.0\Syncfusion.ExcelExport.Net.dll
 C:\Users\abdia\source\repos\BlazorForms\BlazorForms\bin\Debug\net7.0\Syncfusion.Licensing.dll
 C:\Users\abdia\source\repos\BlazorForms\BlazorForms\bin\Debug\net7.0\Syncfusion.PdfExport.Net.dll
+C:\Users\abdia\source\repos\BlazorForms\BlazorForms\obj\Debug\net7.0\BlazorForms.sourcelink.json
+C:\Users\abdia\source\repos\BlazorForms\BlazorForms\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\abdia\source\repos\BlazorForms\BlazorForms\bin\Debug\net7.0\Radzen.Blazor.dll
+C:\Users\abdia\source\repos\BlazorForms\BlazorForms\bin\Debug\net7.0\Redzen.dll
+C:\Users\abdia\source\repos\BlazorForms\BlazorForms\bin\Debug\net7.0\System.Linq.Dynamic.Core.dll
+C:\Users\abdia\source\repos\BlazorForms\BlazorForms\bin\Debug\net7.0\Blazored.LocalStorage.dll
+C:\Users\abdia\source\repos\BlazorForms\BlazorForms\bin\Debug\net7.0\Radzen.Blazor.GridColumnVisibilityChooser.dll
+C:\Users\abdia\source\repos\BlazorForms\BlazorForms\bin\Debug\net7.0\Syncfusion.Chart.Base.dll
+C:\Users\abdia\source\repos\BlazorForms\BlazorForms\bin\Debug\net7.0\Syncfusion.Chart.Windows.dll
+C:\Users\abdia\source\repos\BlazorForms\BlazorForms\bin\Debug\net7.0\Syncfusion.Grouping.Base.dll
+C:\Users\abdia\source\repos\BlazorForms\BlazorForms\bin\Debug\net7.0\Syncfusion.Shared.Base.dll
